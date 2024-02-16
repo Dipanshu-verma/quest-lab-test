@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../footer/footer.css";
- 
+import Membership from "./Membership";
 import Badges from "./Badges";
 import Points from "./Points";
 const filterdata = ["Membership", "Badges", "Point History"];
@@ -17,7 +17,7 @@ const UserCard = ({ userData,setClickBadge,setShowmodel}) => {
         />
       </div>
 
-<div className="absolute top-2">
+<div className="absolute top-2 w-full">
       <h2 className=" text-xl text-center font-bold mt-10">{userData?.name}</h2>
 
       <div className="mt-4 flex justify-around py-3">
@@ -35,8 +35,8 @@ const UserCard = ({ userData,setClickBadge,setShowmodel}) => {
         </div>
       </div>
 
-      <div style={{boxSizing:"border-box"}} className="  mt-4 h-[full]">
-        <div className="flex gap-4 items-center px-2">
+      <div   className="  mt-4 h-[full]">
+        <div className="flex gap-4 items-center px-2 w-full">
           {filterdata.map((elm) => (
             <div
               className={`w-full h-8 font-semibold cursor-pointer relative ${
@@ -51,8 +51,8 @@ const UserCard = ({ userData,setClickBadge,setShowmodel}) => {
             </div>
           ))}
         </div>
-        <div style={{boxSizing:"border-box"}}  className="mt-4  ">
-     
+        <div  className="mt-4 w-full ">
+          {active === "Membership" && <Membership />}
           {active === "Badges" && <Badges userData={userData} setClickBadge={setClickBadge} setShowmodel={setShowmodel} />}
           {active === "Point History" && <Points userData={userData} />}
         </div>
