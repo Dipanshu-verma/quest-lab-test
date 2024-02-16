@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../footer/footer.css";
-import Membership from "./Membership";
+ 
 import Badges from "./Badges";
 import Points from "./Points";
 const filterdata = ["Membership", "Badges", "Point History"];
