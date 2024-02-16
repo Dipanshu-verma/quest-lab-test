@@ -52,7 +52,7 @@ const UserCard = ({ userData,setClickBadge,setShowmodel}) => {
           ))}
         </div>
         <div style={{boxSizing:"border-box"}}  className="mt-4  ">
-          {active === "Membership" && <Membership />}
+     
           {active === "Badges" && <Badges userData={userData} setClickBadge={setClickBadge} setShowmodel={setShowmodel} />}
           {active === "Point History" && <Points userData={userData} />}
         </div>
